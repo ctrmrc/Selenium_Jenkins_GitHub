@@ -4,12 +4,9 @@ pipeline {
         
         stage('Checkout') {
             steps {
-                python -m venv env
-                call ./enc/Scripts/activate.bat
-                pip install -r requirements.txt
-                pip install seleniumbase
-                sbase install chromedriver latest
-                pytest -s -v --lang=en-gb
+            // script here
+            }
+            echo 'Done'
             }
         }
         stage('Build') {
