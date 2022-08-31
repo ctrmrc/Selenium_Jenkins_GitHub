@@ -4,9 +4,8 @@ pipeline {
         
         stage('Checkout') {
             steps {
-            // script here
-            }
-            echo 'Done'
+                echo 'Checkout..'
+                checkout scm
             }
         }
         stage('Build') {
@@ -23,7 +22,7 @@ pipeline {
             }
         }
     }
-          post {
+        post {
      success { 
         withCredentials([string(credentialsId: 'J_Notification_404_token', variable: '5493377417:AAH-twR5yxDd6z5N6i1lpE2TiWDrFdv6t-M'), string(credentialsId: 'J_Notification_404_ID', variable: '126062127')]) {
         sh  ("""
@@ -49,4 +48,3 @@ pipeline {
      }
 
  }
-
