@@ -1,27 +1,16 @@
 pipeline {
     agent any
+
     stages {
-        
-        stage('Checkout') {
+        stage('My-JenkinsBuild-Steps') {
             steps {
-                echo 'Checkout..'
-                checkout scm
-            }
-        }
-        stage('Build') {
-            steps {
-            // script here
-            }
-            echo 'Done'
-            }
-        }
-        stage('Publish') {
-            steps {
-                // script here
-                echo "Deployed Successfully!"
+               echo "Start"
+               echo "Doing something.."
+               echo "End"
             }
         }
     }
+}
         post {
      success { 
         withCredentials([string(credentialsId: 'J_Notification_404_token', variable: '5493377417:AAH-twR5yxDd6z5N6i1lpE2TiWDrFdv6t-M'), string(credentialsId: 'J_Notification_404_ID', variable: '126062127')]) {
