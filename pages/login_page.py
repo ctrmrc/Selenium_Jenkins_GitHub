@@ -3,6 +3,9 @@ from .locators import LoginPageLocators
 import time
 
 class LoginPage(BasePage):
+    def guests_can_see_go_to_login_page_button(self):
+        self.driver.find_element(*LoginPageLocators.BUTTON_GO_TO_LOGIN_PAGE)
+
     def generate_email_n_password(self):
         return (str(time.time()) + '@fakemail.org', 'pass_6789')
 

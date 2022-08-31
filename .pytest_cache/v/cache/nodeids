@@ -1,6 +1,7 @@
 [
   "test_main_page.py::test_guests_can_check_in",
   "test_main_page.py::test_guests_can_go_to_login_page_from_main_page",
+  "test_main_page.py::test_guests_can_see_go_to_login_page_button",
   "test_main_page.py::test_guests_can_see_login_and_register_fields",
   "test_main_page.py::test_guests_can_see_login_button",
   "test_product_page.py::test_guests_can_add_product_to_basket",

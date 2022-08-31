@@ -1,5 +1,8 @@
 from selenium.webdriver.common.by import By as by
 
+class BasePageLocators():
+    MAIN_PAGE_LINK = 'http://selenium1py.pythonanywhere.com/en-gb/'
+
 class ProductPageLocators():
     PRODUCT_PAGE_LINK = 'http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-shellcoders-handbook_209/'
     BUTTON_ADD_TO_BASKET = (by.XPATH, '//button[@value="Add to basket"]')
@@ -10,6 +13,7 @@ class ProductPageLocators():
 
 class LoginPageLocators():
     LOGIN_PAGE_LINK = 'http://selenium1py.pythonanywhere.com/en-gb/accounts/login/'
+    BUTTON_GO_TO_LOGIN_PAGE = (by.ID, 'login_link')
     REGISTRATION_EMAIL = (by.ID, 'id_registration-email')
     REGISTRATION_PASSOWRD = (by.ID, 'id_registration-password1')
     REGISTRATION_CONFIRM_PASSWORD = (by.ID, 'id_registration-password2')
