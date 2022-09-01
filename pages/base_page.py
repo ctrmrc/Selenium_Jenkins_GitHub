@@ -10,7 +10,7 @@ class BasePage(object):
     def open(self):
         self.driver.get(self.url)
 
-    def wait_element(self, howfindel, whatfind, timeout=10):
+    def wait_element(self, howfindel, whatfind, timeout=20):
         try:
             WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located((howfindel, whatfind)))
         except NoSuchElementException:
