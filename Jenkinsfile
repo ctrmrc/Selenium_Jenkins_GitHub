@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('1-Build') {
             steps {
-                sh 'python3 -m venv env'
-                sh 'call ./enc/Scripts/activate.bat'
-                sh 'pip install -r requirements.txt'
-                sh 'pip install seleniumbase'
-                sh 'sbase install chromedriver latest'
-                sh 'pytest -s -v --lang=en-gb'
+                bat 'python3 -m venv env'
+                bat 'call ./enc/Scripts/activate.bat'
+                bat 'pip install -r requirements.txt'
+                bat 'pip install seleniumbase'
+                bat 'sbase install chromedriver latest'
+                bat 'pytest -s -v --lang=en-gb'
             }
         }
     }
