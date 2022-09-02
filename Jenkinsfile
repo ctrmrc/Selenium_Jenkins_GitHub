@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('1-Build') {
             steps {
-                bat 'python3 pytest test_main_page.py'
+                sh 'python3 pytest test_main_page.py'
             }
         }
     }
