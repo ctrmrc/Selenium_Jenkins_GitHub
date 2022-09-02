@@ -3,12 +3,7 @@ pipeline {
     stages {
         stage('1-Build') {
             steps {
-                bat 'python3 -m venv env'
-                bat 'call ./enc/Scripts/activate.bat'
-                bat 'pip install -r requirements.txt'
-                bat 'pip install seleniumbase'
-                bat 'sbase install chromedriver latest'
-                bat 'pytest -s -v --lang=en-gb'
+                bat 'pytest -s -v'
             }
         }
     }
