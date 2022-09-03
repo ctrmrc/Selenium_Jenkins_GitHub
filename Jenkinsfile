@@ -7,7 +7,7 @@ pipeline {
                     python3 --version
                     python3 -m venv env
                     pip3 install -r requirements.txt
-                    pytest --lang=en-gb
+                    pytest --lang=en-gb test_main_page.py
                 '''
                 }
             post {
