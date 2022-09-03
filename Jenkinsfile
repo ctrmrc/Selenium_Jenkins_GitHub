@@ -4,7 +4,8 @@ pipeline {
         stage ('Init') {
             steps {
                 sh '''
-                    python -m venv env
+                    python3 --version
+                    python3 -m venv env
                     pip install -r requirements.txt
                     pytest --lang=en-gb
                 '''
