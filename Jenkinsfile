@@ -6,7 +6,7 @@ pipeline {
                 sh '''
                     python3 --version
                     python3 -m venv env
-                    pip install -r requirements.txt
+                    pip3 install -r requirements.txt
                     pytest --lang=en-gb
                 '''
                 }
