@@ -12,5 +12,5 @@ if 'SUCCESS' in last_line:
 else:
     os.system('curl -s -X POST https://api.telegram.org/bot5698947661:AAFmFW1PEUa7STMd6yXq9x91tJ2oyavqKAE/sendMessage -d chat_id=-746480341 -d text="Finish with FAILURE"')
 
-print(f'max_folder_number IS ----!!!!       {max_folder_number}    !!!!!-------')
-print(last_line)
+print(max_folder_number)
+print(f'last_line IS ----!!!!       {last_line}    !!!!!-------')
